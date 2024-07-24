@@ -1,29 +1,25 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>QR COde Generator</title>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>QR Code Generator</h1>
-            <p>Paste an URL or enter text to create QR Code</p>
-        </header>
-        <div class="form">
-            <input type="text" spellcheck="false" placeholder="Enter text or URL">
-            <button>Generate QR Code</button>
-        </div>
-        <div class="qr-code">
-            <img src="" alt="qr-code">
-        </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<div class="form">
+  <h1>QR Code Generator</h1>
+  <form>
+    <input type="url" id="website" name="website" placeholder="https://webisora.com" required />
+
+    <div id="qrcode-container">
+        <div id="qrcode" class="qrcode"></div>
     </div>
 
-    <script src="script.js"></script>
+    <button type="button" onclick="generateQRCode()">Generate QR Code</button>
+    
+</form>
+</div>
 </body>
-
 </html>
